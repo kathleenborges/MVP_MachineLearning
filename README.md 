@@ -1,0 +1,74 @@
+🍷 MVP 2 - Classificação de Qualidade de Vinho - Machine Learning
+
+Este projeto é um sistema de Classificação de Qualidade de Vinhos que utiliza Machine Learning para prever a nota de um vinho com base em suas características químicas. Desenvolvido como parte do MVP da Pós-Graduação em Engenharia de Software da PUC-Rio.
+Com relação ao quesito SEGURANÇA, embora o dataset de vinhos não contenha dados sensíveis de pessoas (PII), as boas práticas de segurança foram aplicadas através da configuração de CORS no Flask, limitando acessos externos, e o uso de ambientes virtuais (venv) para isolamento de dependências. 
+Em um cenário real com produtores de vinho, técnicas de anonimização seriam aplicadas aos nomes das vinícolas para proteger a propriedade intelectual.
+
+🏗️ Estrutura do Projeto
+
+/api: Coração do projeto.
+
+app.py: Servidor Flask unificado (API + Rotas de Frontend).
+
+classes.py: Lógica de POO para carregamento do modelo e predição.
+
+modelo.pkl & scaler.pkl: Arquivos binários do modelo de ML treinado.
+
+test_app.py: Testes automatizados que validam a integração entre o servidor Flask, a carga do modelo de ML e a entrega do frontend.
+
+requirements.txt: Lista de dependências do Python.
+
+/frontend: Interface do usuário.
+
+index.html: Estrutura da página.
+
+style.css: Design e responsividade.
+
+script.js: Comunicação assíncrona com a API.
+
+🚀 Como Executar
+1. Requisitos Prévios
+
+Certifique-se de ter o Python 3.9+ instalado em sua máquina.
+
+2. Configurando o Backend (API)
+
+Abra o terminal na pasta raiz do projeto:
+
+- Entrar na pasta da API
+cd api
+
+- Criar um ambiente virtual (caso não tenha)
+python3 -m venv venv
+
+- Ativar o ambiente virtual
+# No Mac/Linux:
+source venv/bin/activate
+# No Windows:
+venv\Scripts\activate
+
+- Instalar as dependências
+pip install -r requirements.txt
+
+- Executar a API e o Frontend
+python app.py
+
+- Acessar a Aplicação
+Abra o seu navegador e acesse:
+👉 http://127.0.0.1:5001
+
+🧠 O Modelo de Machine Learning
+Para realizar a predição, o modelo espera 11 parâmetros:
+Acidez (Fixa e Volátil), Ácido Cítrico, Açúcar Residual, Cloretos, Dióxido de Enxofre (Livre e Total), Densidade, pH, Sulfatos e Teor Alcoólico.
+
+O backend utiliza um Scaler preveamente treinado com o método Random Forest para normalizar os dados antes de enviá-los ao modelo, garantindo a precisão da nota sugerida.
+
+🛠️ Tecnologias Utilizadas
+Backend: Python 3, Flask, Scikit-learn, Joblib.
+
+Frontend: HTML5, CSS3, JavaScript (Fetch API).
+
+Ferramentas: VS Code, Venv.
+
+👤 Autora
+Kathleen Borges Pós-Graduação em Engenharia de Software - PUC-Rio
