@@ -36,15 +36,20 @@ Certifique-se de ter o Python 3.9+ instalado em sua máquina.
 Abra o terminal na pasta raiz do projeto:
 
 - Entrar na pasta da API
+  
 cd api
 
 - Criar um ambiente virtual (caso não tenha)
+  
 python3.12 -m venv venv
 
 - Ativar o ambiente virtual
 # No Mac/Linux:
+
 source venv/bin/activate
+
 # No Windows:
+
 venv\Scripts\activate
 
 - Instalar as dependências
