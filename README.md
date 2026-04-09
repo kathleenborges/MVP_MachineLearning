@@ -53,9 +53,11 @@ source venv/bin/activate
 venv\Scripts\activate
 
 - Instalar as dependências
+  
 pip install -r requirements.txt
 
 - Executar a API e o Frontend
+
 python app.py
 
 - Acessar a Aplicação
